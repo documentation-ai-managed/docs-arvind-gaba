@@ -1,0 +1,103 @@
+---
+title: Changelog
+description: Track the latest updates, improvements, and bug fixes in Arvind Gaba to stay informed about new features.
+---
+
+## Recent Updates
+
+<Callout kind="info">
+  Check this changelog regularly to see what's new in Arvind Gaba. You receive notifications for major releases via email if you enable them in your account settings.
+</Callout>
+
+<Update label="2024-10-15" description="v1.2.0" tags={["feature", "improvement"]}>
+
+## New Features
+
+- Added support for custom brand colors, including `#3B82F6` as the default blue theme.
+- Introduced real-time collaboration on documentation pages for teams.
+- New export options: PDF and interactive HTML bundles.
+
+## Improvements
+
+- Enhanced search with fuzzy matching and syntax highlighting for code blocks.
+- Faster page rendering with optimized MDX parsing.
+
+## Bug Fixes
+
+- Fixed parsing errors in nested code blocks using four backticks.
+- Resolved issues with special character escaping in prose (`{` and `}` now render correctly).
+
+</Update>
+
+<Update label="2024-09-20" description="v1.1.0" tags={["feature", "bugfix"]}>
+
+## New Features
+
+- Integrated Mermaid diagrams as native code blocks (no JSX components needed).
+- Added changelog-specific `<Update>` components for better version tracking.
+
+## Bug Fixes
+
+- Corrected frontmatter YAML parsing by eliminating blank lines.
+- Fixed heading hierarchy enforcement—pages now always start with H2.
+
+## Improvements
+
+- Updated component guidelines to include 5-8 diverse types per page.
+
+</Update>
+
+<Update label="2024-08-10" description="v1.0.0" tags={["breaking", "feature"]}>
+
+## New Features
+
+- Core MDX documentation engine with YAML frontmatter support.
+- Full component library: `<Callout>`, `<Steps>`, `<Tabs>`, `<CodeGroup>`, and more.
+- Automatic escaping for special characters like `<`, `>`, `{`, `}` in text.
+
+## Breaking Changes
+
+- Removed H1 headings from body content; use frontmatter `title` instead.
+
+## Initial Setup
+
+Run this to get started:
+
+````javascript
+// Example initialization code
+import { ArvindGaba } from '@arvindgaba/docs';
+
+const docs = new ArvindGaba({
+  brandColor: '#3B82F6',
+  apiKey: 'YOUR_API_KEY'
+});
+docs.render('/changelog.mdx');
+````
+
+</Update>
+
+## Version Summary
+
+| Version | Date       | Key Tags              | Highlights                          |
+|---------|------------|-----------------------|-------------------------------------|
+| v1.2.0 | 2024-10-15 | feature, improvement | Real-time collab, exports           |
+| v1.1.0 | 2024-09-20 | feature, bugfix      | Mermaid support, component updates  |
+| v1.0.0 | 2024-08-10 | breaking, feature    | Core MDX engine launch              |
+
+## Upcoming Roadmap
+
+<Columns cols={3}>
+  <Card title="AI Assistance" icon="zap" href="#">
+    Coming in v1.3.0: Auto-generate docs from code comments.
+  </Card>
+  <Card title="Advanced Analytics" icon="bar-chart-3" href="#">
+    Track page views and engagement metrics.
+  </Card>
+  <Card title="Plugin Ecosystem" icon="puzzle" href="#">
+    Extend with custom components and themes.
+  </Card>
+</Columns>
+
+<Callout kind="tip">
+  Suggest features by emailing support@arvindgaba.com. You help shape the future of this documentation platform.
+</Callout>

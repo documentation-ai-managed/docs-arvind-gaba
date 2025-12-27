@@ -1,0 +1,128 @@
+---
+title: Core Features of Arvind Gaba
+description: Explore the essential tools and capabilities for building and maintaining comprehensive project documentation.
+---
+
+## Overview
+
+Arvind Gaba provides a robust platform for organizing your project documentation. You create structured spaces to manage guides, APIs, and changelogs efficiently. Key features include hierarchical document organization, real-time collaboration, powerful search tools, and full customization options.
+
+<Columns cols={2}>
+  <Card title="Organize Documents" icon="folder" href="#document-organization">
+    Build intuitive hierarchies for your docs.
+  </Card>
+  <Card title="Collaborate Seamlessly" icon="users" href="#collaboration">
+    Share and edit with your team.
+  </Card>
+  <Card title="Search Effectively" icon="search" href="#search">
+    Find content instantly.
+  </Card>
+  <Card title="Customize Branding" icon="palette" href="#customization">
+    Match your brand perfectly.
+  </Card>
+</Columns>
+
+## Document Organization and Hierarchy
+
+You structure your documentation using nested folders and pages. Create a root space for your project, then add sub-pages for topics like quickstarts and APIs.
+
+<Steps>
+  <Step title="Create a Space" icon="plus">
+    Start by setting up your main documentation space.
+  </Step>
+  <Step title="Add Folders" icon="folder">
+    Organize content into folders like `{@docs/introduction}` and `{@docs/api}`.
+  </Step>
+  <Step title="Nest Pages" icon="file-text">
+    Build hierarchies: `/introduction` > `/quickstart` > `/advanced`.
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+  Use descriptive slugs for URLs, like `authentication-flow`, to improve navigation.
+</Callout>
+
+## Collaboration and Sharing Options
+
+Invite team members to collaborate in real-time. You control permissions for viewing, editing, and admin roles.
+
+<Tabs>
+  <Tab title="Team Invite" icon="mail">
+    Send invites via email.
+
+````bash
+# Generate invite link
+curl -X POST https://api.example.com/invites \
+  -H "Authorization: Bearer YOUR_TOKEN" \
+  -d '{"email": "team@company.com", "role": "editor"}'
+````
+  </Tab>
+  <Tab title="Public Sharing" icon="globe">
+    Publish pages publicly or embed them.
+
+    Share via URL: `https://docs.example.com/project/features`
+  </Tab>
+  <Tab title="Version Control" icon="git-branch">
+    Track changes with built-in versioning.
+
+````markdown
+# Edit a page
+git add docs/features.mdx
+git commit -m "Update collaboration section"
+git push origin main
+````
+  </Tab>
+</Tabs>
+
+## Search and Filtering Tools
+
+Powerful search helps you locate content quickly. Filter by tags, dates, or sections.
+
+| Feature          | Description                          | Example Query      |
+|------------------|--------------------------------------|--------------------|
+| Full-Text Search | Matches keywords across all docs     | `authentication`  |
+| Tag Filtering    | Narrow by labels like `api` or `guide` | `tag:api`        |
+| Advanced Filters | Date range, author, or status        | `after:2024-01-01` |
+
+<Callout kind="info">
+  Pro tip: Prefix queries with `@author:username` to find specific contributions.
+</Callout>
+
+## Customization with Brand Colors
+
+Tailor the look to your brand. Set primary colors, logos, and themes via configuration.
+
+<CodeGroup tabs="YAML,JSON">
+````yaml
+# config.yaml
+theme:
+  primaryColor: "#3B82F6"
+  logo: "/assets/logo.svg"
+  font: "Inter"
+````
+
+````json
+{
+  "theme": {
+    "primaryColor": "#3B82F6",
+    "logo": "/assets/logo.svg",
+    "font": "Inter"
+  }
+}
+````
+</CodeGroup>
+
+<Expandable title="Advanced Theme Options" default-open="false">
+
+You extend themes with custom CSS variables.
+
+````css
+:root {
+  --brand-primary: #3B82F6;
+  --brand-secondary: #1E40AF;
+}
+````
+
+</Expandable>
+
+These features empower you to build professional documentation spaces tailored to your projects. Start by organizing your first space today.
